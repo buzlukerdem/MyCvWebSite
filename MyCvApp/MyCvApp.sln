@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCvApp", "MyCvApp\MyCvApp.csproj", "{877A48A2-7E8A-4394-8452-E898A143139E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{877A48A2-7E8A-4394-8452-E898A143139E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{877A48A2-7E8A-4394-8452-E898A143139E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{877A48A2-7E8A-4394-8452-E898A143139E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{877A48A2-7E8A-4394-8452-E898A143139E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B8B35330-4CEE-4039-A443-8CF6620F4D29}
+	EndGlobalSection
+EndGlobal
