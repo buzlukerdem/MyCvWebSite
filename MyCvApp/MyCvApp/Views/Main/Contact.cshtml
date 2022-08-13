@@ -1,0 +1,31 @@
+﻿@using MyCvApp.Models.Entity
+@model List<Tbl_Contact>
+
+<div class="resume-section-content">
+    <form method="post">
+        <h2 class="mb-5">Iletişim</h2>
+        <table class="table-table">
+            <tr>
+                <th style="text-align:center"><label>Ad</label></th>
+                <th style="text-align:center"><label>Soyad</label></th>
+            </tr>
+            <tr>
+                <td style="width:600px; padding-right:25px"><input type="text" class="form-control" name="Name" /></td>
+                <td style="width: 600px; padding-left:25px"><input type="text" class="form-control" name="Surname"/></td>
+            </tr>
+            <tr>
+                <th style="text-align:center"><label>E-Posta</label></th>
+                <th style="text-align:center"><label>Konu Başlığı</label></th>
+            </tr>
+            <tr>
+                <td style="width:600px; padding-right:25px"><input type="text" class="form-control" name="Mail" /></td>
+                <td style="width: 600px; padding-left:25px"><input type="text" class="form-control" name="Subject" /></td>
+            </tr>
+        </table>
+        <br />
+        <div style="text-align:center"><b><label style="text-align:center">Mesaj İçerik</label></b></div>
+        <input type="text" class="form-control" name="Message" />
+        <br />
+        <button class="btn btn-info">Mesaj Gönder</button>
+    </form>
+</div>

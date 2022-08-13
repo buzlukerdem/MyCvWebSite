@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0e57c8b793d54c51abfaae60fba3ff56" Name="Diagram1">
+        <EntityTypeShape EntityType="DB_MyCVModel.Tbl_About" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_MyCVModel.Tbl_Admin" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_MyCVModel.Tbl_Certificate" Width="1.5" PointX="2.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_MyCVModel.Tbl_Contact" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_MyCVModel.Tbl_Education" Width="1.5" PointX="4.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_MyCVModel.Tbl_Experience" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_MyCVModel.Tbl_Interest" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_MyCVModel.Tbl_MySkills" Width="1.5" PointX="6.75" PointY="3.375" IsExpanded="true" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
