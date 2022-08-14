@@ -1,0 +1,64 @@
+﻿@using MyCvApp.Models.Entity
+@model List<Tbl_MySkills>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini" style="font-family:'Times New Roman', Times, serif">
+    <div class="wrapper">
+        <!-- Navbar -->
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h1 class="card-title" style="font-size:24px">Yetenek Listem</h1>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <table class="table table-bordered" style="text-align:center">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 50px">#</th>
+                                            <th>Yeteneklerim</th>
+                                            <th style="width: 150px">Puan</th>
+                                            <th style="width: 50px">Düzenle</th>
+                                            <th style="width: 50px">Sil</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>@item.ID</td>
+                                                <td>@item.MySkills</td>
+                                                <td><span class="badge bg-success">@item.Puan</span></td>
+                                                <td>
+                                                    <a class="btn btn-info btn-sm" href="/Skills/Update/@item.ID"><i class="fas fa-pencil-alt">Düzenle</i></a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-danger btn-sm" href="/Skills/Delete/@item.ID"><i class="fas fa-trash">Sil</i></a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div style="text-align:end; padding-right:20px"><a href="/Skills/Insert" class="btn btn-warning">Yeni Yetenek Ekle</a></div>
+                            <br />
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+</body>
+</html>

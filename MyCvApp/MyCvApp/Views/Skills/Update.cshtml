@@ -1,0 +1,19 @@
+﻿@model MyCvApp.Models.Entity.Tbl_MySkills
+
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<form method="post" style="font-family:'Times New Roman', Times, serif">
+    <h1 style="text-align:center;">Yetenek Güncelleme Sayfası</h1>
+    @Html.Label("Yetenek Adı")
+    @Html.TextBoxFor(x => x.MySkills, new { @class = "form-control" })
+    <br />
+    @Html.Label("10 üzerinden puan")
+    @Html.TextBoxFor(x => x.Puan, new { @class = "form-control" })
+    <br />
+    <div style="text-align:center"><button class="btn btn-info">GÜNCELLE</button></div>
+</form>
+

@@ -1,0 +1,21 @@
+﻿@using MyCvApp.Models.Entity
+@model List<Tbl_Experience>
+@{
+    ViewBag.Title = "Insert";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<form method="post" style="font-family:'Times New Roman', Times, serif">
+    <h1 style="text-align:center;">Deneyim Ekleme Sayfası</h1>
+    <br />
+    <input type="text" name="Title" class="form-control" placeholder="Başlık Bilgisi" />
+    <br />
+    <input type="text" name="Subtitle" class="form-control" placeholder="Alt Başlık Bilgisi" />
+    <br />
+    <input type="text" name="Date" class="form-control" placeholder="Çalışma Tarih Aralığı" />
+    <br />
+    <textarea placeholder="Açıklama Bilgisi" name="Explanation" class="form-control" rows="6"></textarea>
+    <br />
+    <div style="text-align:center"><button class="btn btn-info">KAYDET</button></div>
+</form>
+

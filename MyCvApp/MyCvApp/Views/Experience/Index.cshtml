@@ -1,0 +1,38 @@
+﻿@using MyCvApp.Models.Entity
+@model List<Tbl_Experience>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<form style="font-family:'Times New Roman', Times, serif">
+    <h1 style="text-align:center;">Deneyimlerim</h1>
+
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Başlık</th>
+            <th>Alt Başlık</th>
+            <th>Açıklama</th>
+            <th>Tarih</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ID</td>
+                <td>@item.Title</td>
+                <td>@item.Subtitle</td>
+                <td>@item.Explanation</td>
+                <td>@item.Date</td>
+                <td><a href="/Experience/Delete/@item.ID" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Experience/Update/@item.ID" class="btn btn-success">Güncelle</a></td>
+            </tr>
+        }
+
+    </table>
+    <div style="text-align:end"><a href="/Experience/Insert" class="btn btn-primary" style="text-align:end">Yeni Deneyim Ekle</a></div>
+</form>
+
+

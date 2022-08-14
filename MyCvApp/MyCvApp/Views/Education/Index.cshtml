@@ -1,0 +1,42 @@
+﻿@using MyCvApp.Models.Entity
+@model List<Tbl_Education>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<form style="font-family:'Times New Roman', Times, serif">
+    <h1 style="text-align:center;">Eğitimlerim</h1>
+
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Başlık</th>
+            <th>Alt Başlık-1</th>
+            <th>Alt Başlık-2</th>
+            <th>Başlangıç - Bitiş Tarihi</th>
+            <th>Güncelle</th>
+            <th>Sil</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ID</td>
+                <td>@item.Title</td>
+                <td>@item.Subtitle1</td>
+                <td>@item.Subtitle2</td>
+                <td>@item.Date</td>
+                <td>
+                    <a class="btn btn-info btn-sm" href="/Education/Update/@item.ID"><i class="fas fa-pencil-alt">Düzenle</i></a>
+                </td>
+                <td>
+                    <a class="btn btn-danger btn-sm" href="/Education/Delete/@item.ID"><i class="fas fa-trash">Sil</i></a>
+                </td>
+            </tr>
+        }
+
+    </table>
+    <div style="text-align:end"><a href="/Education/Insert" class="btn btn-primary" style="text-align:end">Yeni Eğitim Ekle</a></div>
+</form>
+

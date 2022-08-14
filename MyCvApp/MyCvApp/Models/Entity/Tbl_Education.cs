@@ -11,10 +11,12 @@ namespace MyCvApp.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Tbl_Education
     {
         public short ID { get; set; }
+        [Required(ErrorMessage =" Bu alan boþ geçilemez.")]
         public string Title { get; set; }
         public string Subtitle1 { get; set; }
         public string Subtitle2 { get; set; }

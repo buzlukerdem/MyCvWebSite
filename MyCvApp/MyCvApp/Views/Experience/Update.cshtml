@@ -1,0 +1,28 @@
+﻿@model MyCvApp.Models.Entity.Tbl_Experience
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<form method="post" style="font-family:'Times New Roman', Times, serif">
+    <h1 style="text-align:center;">Deneyim Güncelleme Sayfası</h1>
+    @Html.Label("Deneyim ID")
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    @Html.Label("Alt Başlık")
+    @Html.TextBoxFor(x => x.Subtitle, new { @class = "form-control" })
+    <br />
+    @Html.Label("Tarih Aralığı")
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+    <br />
+    @Html.Label("Açıklama")
+    @Html.TextAreaFor(x => x.Explanation, new { @class = "form-control" })
+    <br />
+
+    <div style="text-align:center"><button class="btn btn-info">GÜNCELLE</button></div>
+</form>
+

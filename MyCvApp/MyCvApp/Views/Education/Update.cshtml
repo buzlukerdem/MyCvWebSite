@@ -1,0 +1,27 @@
+﻿@model MyCvApp.Models.Entity.Tbl_Education
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<form method="post" style="font-family:'Times New Roman', Times, serif">
+    <h1 style="text-align:center;">Eğitim Düzenleme Sayfası</h1>
+    <div style="padding-left:75px; padding-right:75px">
+        @Html.Label("Başlık")
+        @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Title, "", new { @style = "color:red" })
+        <br />
+        @Html.Label("Alt Başlık-1")
+        @Html.TextBoxFor(x => x.Subtitle1, new { @class = "form-control" })
+        <br />
+        @Html.Label("Alt Başlık-2")
+        @Html.TextBoxFor(x => x.Subtitle2, new { @class = "form-control" })
+        <br />
+        @Html.Label("Başlangıc - Bitiş Tarihi")
+        @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+        <br />
+    </div>
+    <div style="text-align:center"><button class="btn btn-info">GÜNCELLE</button></div>
+</form>
+
