@@ -27,6 +27,7 @@
     </Key>
     <Property Name="ID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Explanation" Type="varchar(max)" />
+    <Property Name="Date" Type="varchar(max)" />
   </EntityType>
   <EntityType Name="Tbl_Contact">
     <Key>

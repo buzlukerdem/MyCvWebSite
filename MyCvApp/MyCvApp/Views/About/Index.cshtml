@@ -1,20 +1,38 @@
-﻿
+﻿@using MyCvApp.Models.Entity
+@model List<Tbl_About>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Hakkımda Sayfası</h2>
+<br />
+<form method="post" style="font-family:'Times New Roman', Times, serif">
+    @foreach (var item in Model)
+    {
+        <h1 style="text-align:center;">Hakkımda Bilgilerimi Düzenleme Sayfası</h1>
+        <br />
+        <label>Ad</label>
+        <textarea rows="1" class="form-control" name="Name">@item.Name</textarea>
+        <br />
+        <label>Soyad</label>
+        <textarea rows="1" class="form-control" name="Surname">@item.Surname</textarea>
+        <br />
+        <label>Adres Bilgisi</label>
+        <textarea rows="1" class="form-control" name="Address">@item.Address</textarea>
+        <br />
+        <label>Telefon Numarası</label>
+        <textarea rows="1" class="form-control" name="PhoneNumber">@item.PhoneNumber</textarea>
+        <br />
+        <label>E-Posta</label>
+        <textarea rows="1" class="form-control" name="Mail">@item.Mail</textarea>
+        <br />
+        <label>Resim</label>
+        <textarea rows="1" class="form-control" name="Picture">@item.Picture</textarea>
+        <br />
+        <label>Açıklama</label>
+        <textarea rows="5" class="form-control" name="Explanation">@item.Explanation</textarea>
+        <br />
+        <div style="text-align:center"><button class="btn btn-info">Bilgilerimi Güncelle</button></div>
+    }
 
-<table class="table table-bordered" style="text-align:center">
-    <tr>
-        <th>#</th>
-        <th>name</th>
-        <th>surname</th>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>Erdem</td>
-        <td>Buzluk</td>
-    </tr>
-</table>
+</form>

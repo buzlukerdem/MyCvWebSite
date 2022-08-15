@@ -32,6 +32,7 @@
           </Key>
           <Property Name="ID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Explanation" Type="varchar(max)" />
+          <Property Name="Date" Type="varchar(max)" />
         </EntityType>
         <EntityType Name="Tbl_Contact">
           <Key>
@@ -123,6 +124,7 @@
           </Key>
           <Property Name="ID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Explanation" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Date" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Tbl_Contact">
           <Key>
@@ -171,7 +173,7 @@
           </Key>
           <Property Name="ID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MySkills" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Puan" Type="String" />
+          <Property Name="Puan" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
         </EntityType>
         <EntityContainer Name="DB_MyCVEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Tbl_About" EntityType="Self.Tbl_About" />
@@ -215,6 +217,7 @@
           <EntitySetMapping Name="Tbl_Certificate">
             <EntityTypeMapping TypeName="DB_MyCVModel.Tbl_Certificate">
               <MappingFragment StoreEntitySet="Tbl_Certificate">
+                <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Explanation" ColumnName="Explanation" />
               </MappingFragment>

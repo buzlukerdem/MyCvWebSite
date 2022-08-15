@@ -16,5 +16,6 @@ namespace MyCvApp.Models.Entity
     {
         public short ID { get; set; }
         public string Explanation { get; set; }
+        public string Date { get; set; }
     }
 }

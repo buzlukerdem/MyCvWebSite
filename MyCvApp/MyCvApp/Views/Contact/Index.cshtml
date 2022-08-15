@@ -1,0 +1,59 @@
+﻿@using MyCvApp.Models.Entity
+@model List<Tbl_Contact>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini" style="font-family:'Times New Roman', Times, serif">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+
+                <!-- /.col -->
+                <div class="col-md-12">
+                    <div class="card">
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <div class="tab-pane" id="timeline">
+                                <!-- The timeline -->
+                                <div class="timeline timeline-inverse">
+                                    @foreach (var item in Model)
+                                    {
+                                        <div class="time-label">
+                                            <span class="accent-blue">
+                                                @item.Mail
+                                            </span>
+                                        </div>
+
+                                        <div>
+                                            <i class="fas fa-comments bg-warning"></i>
+                                            <div class="timeline-item">
+                                                <span class="time"><strong>@(((DateTime)item.Date).ToString("dd-MMM-yyyy"))</strong></span>
+                                                <h3 class="timeline-header"><a href="#">@item.Name @item.Surname</a> - @item.Subject</h3>
+                                                <div class="timeline-body">
+                                                    @item.Message
+                                                </div>
+                                                <div class="timeline-footer">
+                                                    <a href="#" class="btn btn-warning btn-flat btn-sm">View comment</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.tab-content -->
+                    </div><!-- /.card-body -->
+                </div>
+                <!-- /.nav-tabs-custom -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </section>
+</body>
+</html>

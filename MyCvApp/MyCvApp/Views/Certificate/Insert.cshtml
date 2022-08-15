@@ -1,0 +1,19 @@
+﻿@model MyCvApp.Models.Entity.Tbl_Certificate
+@{
+    ViewBag.Title = "Insert";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<form method="post" style="font-family:'Times New Roman', Times, serif">
+    <h1 style="text-align:center;">Yetenek Ekleme Sayfası</h1>
+    <div style="padding-left:75px; padding-right:75px">
+        @Html.Label("Sertifika Açıklaması")
+        @Html.TextBoxFor(x => x.Explanation, new { @class = "form-control" })
+        <br />
+        @Html.Label("Sertifika Alınma Tarihi")
+        @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+        <br />
+    </div>
+    <div style="text-align:center"><button class="btn btn-info">EKLE</button></div>
+</form>

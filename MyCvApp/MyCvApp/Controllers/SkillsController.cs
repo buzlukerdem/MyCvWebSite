@@ -26,6 +26,10 @@ namespace MyCvApp.Controllers
         [HttpPost]
         public ActionResult Insert(Tbl_MySkills p)
         {
+            if (!ModelState.IsValid)
+            {
+                return View("Insert");
+            }
             repo.Add(p);
             return RedirectToAction("Index");
         }
