@@ -7,6 +7,7 @@ using MyCvApp.Models.Entity;
 
 namespace MyCvApp.Controllers
 {
+    [AllowAnonymous]
     public class MainController : Controller
     {
         // GET: Main

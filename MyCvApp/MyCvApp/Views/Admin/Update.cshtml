@@ -1,0 +1,24 @@
+﻿@model MyCvApp.Models.Entity.Tbl_Admin
+
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<form method="post" style="font-family:'Times New Roman', Times, serif">
+    <h1 style="text-align:center;">Admin Güncelleme Sayfası</h1>
+    @Html.Label("Admin ID")
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Kullanıcı adı")
+    @Html.TextBoxFor(x => x.Username, new { @class = "form-control" })
+    <br />
+    @Html.Label("Şifre")
+    @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
+    <br />
+    <div style="text-align:center"><button class="btn btn-info">GÜNCELLE</button></div>
+</form>
+
+
+

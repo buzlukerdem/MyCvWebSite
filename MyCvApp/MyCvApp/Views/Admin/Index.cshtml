@@ -1,0 +1,31 @@
+﻿@using MyCvApp.Models.Entity
+@model List<Tbl_Admin>  
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<form style="font-family:'Times New Roman', Times, serif">
+    <h1 style="text-align:center;">Admin İşlemleri</h1>
+
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Kullanıcı Adı</th>
+            <th>Düzenle</th>
+            <th>Sil</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ID</td>
+                <td>@item.Username</td>
+                <td><a href="/Admin/Update/@item.ID" class="btn btn-success">Düzenle</a></td>
+                <td><a href="/Admin/Delete/@item.ID" class="btn btn-danger">Sil</a></td>
+            </tr>
+        }
+    </table>
+    <div style="text-align:end"><a href="/Admin/Insert" class="btn btn-primary" style="text-align:end">Admin Ekle</a></div>
+</form>
+

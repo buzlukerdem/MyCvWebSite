@@ -1,0 +1,18 @@
+﻿@using MyCvApp.Models.Entity
+@model List<Tbl_Admin>
+@{
+    ViewBag.Title = "Insert";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<form method="post" style="font-family:'Times New Roman', Times, serif">
+    <h1 style="text-align:center;">Yeni Kullanıcı Ekleme Sayfası</h1>
+    <br />
+    <input type="text" name="Username" class="form-control" placeholder="Kullanıcı Adı" />
+    <br />
+    <input type="text" name="Password" class="form-control" placeholder="Şifre" />
+    <br />
+    <div style="text-align:center"><button class="btn btn-info">KAYDET</button></div>
+</form>
+
